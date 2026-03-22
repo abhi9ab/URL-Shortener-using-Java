@@ -1,0 +1,5 @@
+2026-03-22 18:57:02.596 TRACE [http-nio-8081-exec-1] AUDIT_LOGGER - AUDIT | IP: 0:0:0:0:0:0:0:1 | Action: Shorten URL for Original URL: https://example.com
+2026-03-22 18:59:22.090 TRACE [http-nio-8081-exec-9] AUDIT_LOGGER - AUDIT | IP: 0:0:0:0:0:0:0:1 | Action: Expanded URL for shortcode: 2kniAM
+2026-03-22 18:59:32.201 TRACE [http-nio-8081-exec-1] AUDIT_LOGGER - AUDIT | IP: 0:0:0:0:0:0:0:1 | Action: Get all URLs
+2026-03-22 19:06:43.540 TRACE [http-nio-8081-exec-1] AUDIT_LOGGER - AUDIT | IP: 0:0:0:0:0:0:0:1 | Action: Expanded URL for shortcode: 2kniAM
+2026-03-22 19:13:26.199 TRACE [http-nio-8081-exec-3] AUDIT_LOGGER - AUDIT | IP: 0:0:0:0:0:0:0:1 | Action: Shorten URL for Original URL: https://github.com

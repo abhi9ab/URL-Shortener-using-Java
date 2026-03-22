@@ -1,0 +1,302 @@
+2026-03-22 16:58:30.030 INFO  [main] URLShortenerApplication - Starting URLShortenerApplication using Java 21.0.10 on fedora with PID 712714 (/home/abhi9ab/Developer/URL_Shortener_backend/target/classes started by abhi9ab in /home/abhi9ab/Developer/URL_Shortener_backend)
+2026-03-22 16:58:30.031 INFO  [main] URLShortenerApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-22 16:58:30.032 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2026-03-22 16:58:30.323 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-03-22 16:58:30.324 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-22 16:58:30.330 WARN  [main] o.s.b.a.AutoConfigurationPackages - @EnableAutoConfiguration was declared on a class in the default package. Automatic @Repository and @Entity scanning is not enabled.
+2026-03-22 16:58:30.332 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2026-03-22 16:58:30.345 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-03-22 16:58:30.346 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-22 16:58:30.353 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2026-03-22 16:58:30.651 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2026-03-22 16:58:30.657 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-03-22 16:58:30.657 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-22 16:58:30.657 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2026-03-22 16:58:30.706 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-22 16:58:30.707 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 649 ms
+2026-03-22 16:58:30.898 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2026-03-22 16:58:30.969 INFO  [main] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-03-22 16:58:31.076 WARN  [main] o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+java.sql.SQLException: Cannot create PoolableConnectionFactory (Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.)
+	at org.apache.commons.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:653)
+	at org.apache.commons.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:531)
+	at org.apache.commons.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:731)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:175)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:173)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:86)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:479)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:85)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:709)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:746)
+	at org.springframework.orm.hibernate5.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:616)
+	at org.springframework.orm.hibernate5.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:934)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at URLShortenerApplication.main(URLShortenerApplication.java:43)
+Caused by: org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:319)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:402)
+	at org.postgresql.Driver.connect(Driver.java:261)
+	at org.apache.commons.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:52)
+	at org.apache.commons.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:374)
+	at org.apache.commons.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:106)
+	at org.apache.commons.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:649)
+	... 41 common frames omitted
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:241)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:109)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235)
+	... 49 common frames omitted
+2026-03-22 16:58:31.081 INFO  [main] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-03-22 16:58:31.157 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-03-22 16:58:31.187 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-22 16:58:31.384 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-03-22 16:58:31.396 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2026-03-22 16:58:31.403 INFO  [main] URLShortenerApplication - Started URLShortenerApplication in 1.603 seconds (JVM running for 1.762)
+2026-03-22 18:22:07.693 INFO  [main] URLShortenerApplication - Starting URLShortenerApplication using Java 21.0.10 on fedora with PID 769838 (/home/abhi9ab/Developer/URL_Shortener_backend/target/classes started by abhi9ab in /home/abhi9ab/Developer/URL_Shortener_backend)
+2026-03-22 18:22:07.694 INFO  [main] URLShortenerApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-22 18:22:07.703 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2026-03-22 18:22:08.069 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-03-22 18:22:08.070 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-22 18:22:08.077 WARN  [main] o.s.b.a.AutoConfigurationPackages - @EnableAutoConfiguration was declared on a class in the default package. Automatic @Repository and @Entity scanning is not enabled.
+2026-03-22 18:22:08.077 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2026-03-22 18:22:08.086 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-03-22 18:22:08.087 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-22 18:22:08.092 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2026-03-22 18:22:08.452 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2026-03-22 18:22:08.458 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-03-22 18:22:08.458 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-22 18:22:08.459 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2026-03-22 18:22:08.524 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-22 18:22:08.524 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 799 ms
+2026-03-22 18:22:08.743 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2026-03-22 18:22:08.866 INFO  [main] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-03-22 18:22:09.083 INFO  [main] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-03-22 18:22:09.179 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-03-22 18:22:09.218 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-22 18:22:09.432 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-03-22 18:22:09.444 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2026-03-22 18:22:09.449 INFO  [main] URLShortenerApplication - Started URLShortenerApplication in 1.975 seconds (JVM running for 2.17)
+2026-03-22 18:23:07.935 INFO  [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-22 18:23:07.935 INFO  [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-22 18:23:07.936 INFO  [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-03-22 18:40:19.343 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2026-03-22 18:40:19.346 INFO  [main] c.shortenurl.URLShortenerApplication - Starting URLShortenerApplication using Java 25.0.2 on fedora with PID 799999 (/home/abhi9ab/Developer/URL_Shortener_backend/target/classes started by abhi9ab in /home/abhi9ab/Developer/URL_Shortener_backend)
+2026-03-22 18:40:19.346 DEBUG [main] c.shortenurl.URLShortenerApplication - Running with Spring Boot v2.7.0, Spring v5.3.20
+2026-03-22 18:40:19.346 INFO  [main] c.shortenurl.URLShortenerApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-22 18:40:19.705 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-03-22 18:40:19.706 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-22 18:40:19.715 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2026-03-22 18:40:19.723 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-03-22 18:40:19.724 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-22 18:40:19.730 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 0 Redis repository interfaces.
+2026-03-22 18:40:20.130 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2026-03-22 18:40:20.136 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-03-22 18:40:20.136 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-22 18:40:20.137 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2026-03-22 18:40:20.192 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-22 18:40:20.192 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 810 ms
+2026-03-22 18:40:20.429 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2026-03-22 18:40:20.507 INFO  [main] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-03-22 18:40:20.689 INFO  [main] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-03-22 18:40:20.907 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-03-22 18:40:20.932 DEBUG [main] com.shortenurl.util.Util - Log directory already exists at: /home/abhi9ab/Developer/URL_Shortener_backend/logs
+2026-03-22 18:40:21.002 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-22 18:40:21.248 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-03-22 18:40:21.256 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2026-03-22 18:40:21.261 INFO  [main] c.shortenurl.URLShortenerApplication - Started URLShortenerApplication in 2.145 seconds (JVM running for 2.3)
+2026-03-22 18:40:36.990 INFO  [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-22 18:40:36.990 INFO  [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-22 18:40:36.991 INFO  [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-03-22 18:40:37.081 DEBUG [http-nio-8081-exec-1] com.shortenurl.util.Util - Redis Key: shorten-url-0:0:0:0:0:0:0:1 
+Key: 1774185037076-1f3b1628-6aef-4871-ac27-902166db3865
+2026-03-22 18:40:37.147 WARN  [http-nio-8081-exec-1] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42P01
+2026-03-22 18:40:37.147 ERROR [http-nio-8081-exec-1] o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: relation "projects.url_mapping" does not exist
+  Position: 49
+2026-03-22 18:40:43.033 DEBUG [http-nio-8081-exec-3] com.shortenurl.util.Util - Redis Key: shorten-url-0:0:0:0:0:0:0:1 
+Key: 1774185043029-9f0ac26f-9c95-474a-8811-b9d3c03ac442
+2026-03-22 18:40:43.045 WARN  [http-nio-8081-exec-3] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42P01
+2026-03-22 18:40:43.046 ERROR [http-nio-8081-exec-3] o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: relation "projects.url_mapping" does not exist
+  Position: 49
+2026-03-22 18:40:44.651 DEBUG [http-nio-8081-exec-5] com.shortenurl.util.Util - Redis Key: shorten-url-0:0:0:0:0:0:0:1 
+Key: 1774185044647-2d123645-315f-4d78-8038-2cfcbaf1979e
+2026-03-22 18:40:57.846 DEBUG [http-nio-8081-exec-7] com.shortenurl.util.Util - Redis Key: shorten-url-0:0:0:0:0:0:0:1 
+Key: 1774185057845-e0bc1755-3b4e-4f03-932c-944998612507
+2026-03-22 18:46:59.619 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2026-03-22 18:46:59.628 INFO  [main] URLShortenerApplication - Starting URLShortenerApplication using Java 21.0.10 on fedora with PID 805231 (/home/abhi9ab/Developer/URL_Shortener_backend/target/classes started by abhi9ab in /home/abhi9ab/Developer/URL_Shortener_backend)
+2026-03-22 18:46:59.629 INFO  [main] URLShortenerApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-22 18:46:59.997 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-03-22 18:46:59.998 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-22 18:47:00.004 WARN  [main] o.s.b.a.AutoConfigurationPackages - @EnableAutoConfiguration was declared on a class in the default package. Automatic @Repository and @Entity scanning is not enabled.
+2026-03-22 18:47:00.005 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2026-03-22 18:47:00.013 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-03-22 18:47:00.014 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-22 18:47:00.019 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2026-03-22 18:47:00.429 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2026-03-22 18:47:00.435 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-03-22 18:47:00.436 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-22 18:47:00.436 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2026-03-22 18:47:00.507 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-22 18:47:00.507 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 848 ms
+2026-03-22 18:47:00.735 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2026-03-22 18:47:00.814 INFO  [main] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-03-22 18:47:01.004 INFO  [main] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-03-22 18:47:01.234 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-03-22 18:47:01.263 DEBUG [main] com.shortenurl.util.Util - Log directory already exists at: /home/abhi9ab/Developer/URL_Shortener_backend/logs
+2026-03-22 18:47:01.312 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-22 18:47:01.567 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-03-22 18:47:01.574 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2026-03-22 18:47:01.581 INFO  [main] URLShortenerApplication - Started URLShortenerApplication in 2.2 seconds (JVM running for 2.376)
+2026-03-22 18:47:15.716 INFO  [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-22 18:47:15.717 INFO  [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-22 18:47:15.718 INFO  [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-03-22 18:47:15.797 DEBUG [http-nio-8081-exec-1] com.shortenurl.util.Util - Redis Key: shorten-url-0:0:0:0:0:0:0:1 
+Key: 1774185435793-66bc8ce7-ef1f-481c-a2e7-01fb16e1655f
+2026-03-22 18:47:15.864 WARN  [http-nio-8081-exec-1] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42P01
+2026-03-22 18:47:15.865 ERROR [http-nio-8081-exec-1] o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: relation "projects.url_mapping" does not exist
+  Position: 49
+2026-03-22 18:53:45.379 INFO  [main] URLShortenerApplication - Starting URLShortenerApplication using Java 21.0.10 on fedora with PID 809486 (/home/abhi9ab/Developer/URL_Shortener_backend/target/classes started by abhi9ab in /home/abhi9ab/Developer/URL_Shortener_backend)
+2026-03-22 18:53:45.380 INFO  [main] URLShortenerApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-22 18:53:45.389 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2026-03-22 18:53:45.682 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-03-22 18:53:45.682 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-22 18:53:45.688 WARN  [main] o.s.b.a.AutoConfigurationPackages - @EnableAutoConfiguration was declared on a class in the default package. Automatic @Repository and @Entity scanning is not enabled.
+2026-03-22 18:53:45.688 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2026-03-22 18:53:45.696 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-03-22 18:53:45.696 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-22 18:53:45.700 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2026-03-22 18:53:46.044 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2026-03-22 18:53:46.049 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-03-22 18:53:46.049 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-22 18:53:46.050 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2026-03-22 18:53:46.105 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-22 18:53:46.105 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 699 ms
+2026-03-22 18:53:46.330 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2026-03-22 18:53:46.403 INFO  [main] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-03-22 18:53:46.576 INFO  [main] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-03-22 18:53:46.794 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-03-22 18:53:46.822 DEBUG [main] com.shortenurl.util.Util - Log directory already exists at: /home/abhi9ab/Developer/URL_Shortener_backend/logs
+2026-03-22 18:53:46.872 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-22 18:53:47.105 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-03-22 18:53:47.113 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2026-03-22 18:53:47.119 INFO  [main] URLShortenerApplication - Started URLShortenerApplication in 1.923 seconds (JVM running for 2.089)
+2026-03-22 18:53:54.816 INFO  [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-22 18:53:54.816 INFO  [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-22 18:53:54.817 INFO  [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-03-22 18:53:54.890 DEBUG [http-nio-8081-exec-1] com.shortenurl.util.Util - Redis Key: shorten-url-0:0:0:0:0:0:0:1 
+Key: 1774185834886-842e05e0-a365-4177-b548-fb726543550b
+2026-03-22 18:53:54.954 WARN  [http-nio-8081-exec-1] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42P01
+2026-03-22 18:53:54.954 ERROR [http-nio-8081-exec-1] o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: relation "url_mapping" does not exist
+  Position: 49
+2026-03-22 18:56:55.328 INFO  [main] URLShortenerApplication - Starting URLShortenerApplication using Java 21.0.10 on fedora with PID 811800 (/home/abhi9ab/Developer/URL_Shortener_backend/target/classes started by abhi9ab in /home/abhi9ab/Developer/URL_Shortener_backend)
+2026-03-22 18:56:55.329 INFO  [main] URLShortenerApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-22 18:56:55.332 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2026-03-22 18:56:55.646 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-03-22 18:56:55.646 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-22 18:56:55.652 WARN  [main] o.s.b.a.AutoConfigurationPackages - @EnableAutoConfiguration was declared on a class in the default package. Automatic @Repository and @Entity scanning is not enabled.
+2026-03-22 18:56:55.652 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2026-03-22 18:56:55.660 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-03-22 18:56:55.661 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-22 18:56:55.665 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2026-03-22 18:56:56.025 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2026-03-22 18:56:56.031 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-03-22 18:56:56.031 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-22 18:56:56.031 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2026-03-22 18:56:56.103 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-22 18:56:56.103 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 749 ms
+2026-03-22 18:56:56.307 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2026-03-22 18:56:56.382 INFO  [main] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-03-22 18:56:56.558 INFO  [main] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-03-22 18:56:56.774 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-03-22 18:56:56.803 DEBUG [main] com.shortenurl.util.Util - Log directory already exists at: /home/abhi9ab/Developer/URL_Shortener_backend/logs
+2026-03-22 18:56:56.855 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-22 18:56:57.098 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-03-22 18:56:57.106 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2026-03-22 18:56:57.113 INFO  [main] URLShortenerApplication - Started URLShortenerApplication in 1.971 seconds (JVM running for 2.157)
+2026-03-22 18:57:02.419 INFO  [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-22 18:57:02.419 INFO  [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-22 18:57:02.420 INFO  [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-03-22 18:57:02.494 DEBUG [http-nio-8081-exec-1] com.shortenurl.util.Util - Redis Key: shorten-url-0:0:0:0:0:0:0:1 
+Key: 1774186022491-b000fa3a-47d3-4b9f-b9e3-281fca156263
+2026-03-22 18:57:02.566 ERROR [http-nio-8081-exec-1] com.shortenurl.util.Util - Data not found for shortCode using field originalUrl, with filter value https://example.com
+2026-03-22 18:57:02.593 DEBUG [http-nio-8081-exec-1] com.shortenurl.util.Util - Set expiry 300s for key 2kniAM in Redis
+2026-03-22 18:57:02.593 DEBUG [http-nio-8081-exec-1] com.shortenurl.util.Util - Saved key 2kniAM with timeout 300s to Redis
+2026-03-22 18:57:02.596 DEBUG [http-nio-8081-exec-1] com.shortenurl.util.Util - Short Code: 2kniAM
+2026-03-22 18:58:33.261 ERROR [http-nio-8081-exec-5] com.shortenurl.util.Util - Invalid short URL prefix for URL: http://short.est/abc123
+2026-03-22 18:59:22.098 DEBUG [http-nio-8081-exec-9] com.shortenurl.util.Util - Retrieved key 2kniAM from Redis with value: https://example.com
+2026-03-22 18:59:22.098 DEBUG [http-nio-8081-exec-9] com.shortenurl.util.Util - Original URL: https://example.com for shortCode: 2kniAM
+2026-03-22 18:59:32.200 DEBUG [http-nio-8081-exec-1] com.shortenurl.util.Util - Entity: shortCode=2kniAM, originalUrl=https://example.com, createdAt=2026-03-22 18:57:02.575, hitCount=1
+2026-03-22 19:06:24.961 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2026-03-22 19:06:24.961 INFO  [main] URLShortenerApplication - Starting URLShortenerApplication using Java 21.0.10 on fedora with PID 821453 (/home/abhi9ab/Developer/URL_Shortener_backend/target/classes started by abhi9ab in /home/abhi9ab/Developer/URL_Shortener_backend)
+2026-03-22 19:06:24.966 INFO  [main] URLShortenerApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-22 19:06:25.293 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-03-22 19:06:25.293 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-22 19:06:25.299 WARN  [main] o.s.b.a.AutoConfigurationPackages - @EnableAutoConfiguration was declared on a class in the default package. Automatic @Repository and @Entity scanning is not enabled.
+2026-03-22 19:06:25.299 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2026-03-22 19:06:25.308 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-03-22 19:06:25.309 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-22 19:06:25.313 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2026-03-22 19:06:25.674 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2026-03-22 19:06:25.679 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-03-22 19:06:25.680 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-22 19:06:25.680 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2026-03-22 19:06:25.728 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-22 19:06:25.728 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 711 ms
+2026-03-22 19:06:25.938 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2026-03-22 19:06:26.012 INFO  [main] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-03-22 19:06:26.190 INFO  [main] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-03-22 19:06:26.407 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-03-22 19:06:26.434 DEBUG [main] com.shortenurl.util.Util - Log directory already exists at: /home/abhi9ab/Developer/URL_Shortener_backend/logs
+2026-03-22 19:06:26.488 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-22 19:06:26.733 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-03-22 19:06:26.745 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2026-03-22 19:06:26.757 INFO  [main] URLShortenerApplication - Started URLShortenerApplication in 1.993 seconds (JVM running for 2.143)
+2026-03-22 19:06:43.478 INFO  [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-22 19:06:43.478 INFO  [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-22 19:06:43.479 INFO  [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-03-22 19:06:43.550 DEBUG [http-nio-8081-exec-1] com.shortenurl.util.Util - Retrieved key 2kniAM from Redis with value: null
+2026-03-22 19:06:43.613 DEBUG [http-nio-8081-exec-1] com.shortenurl.util.Util - Set expiry 120s for key 2kniAM in Redis
+2026-03-22 19:06:43.613 DEBUG [http-nio-8081-exec-1] com.shortenurl.util.Util - Saved key 2kniAM with timeout 120s to Redis
+2026-03-22 19:06:43.613 DEBUG [http-nio-8081-exec-1] com.shortenurl.util.Util - Original URL: https://example.com for shortCode: 2kniAM
+2026-03-22 19:13:26.134 DEBUG [http-nio-8081-exec-3] com.shortenurl.util.Util - Redis Key: shorten-url-0:0:0:0:0:0:0:1 
+Key: 1774187006128-c52edf35-5408-49ec-8161-4a63279db6f0
+2026-03-22 19:13:26.153 ERROR [http-nio-8081-exec-3] com.shortenurl.util.Util - Data not found for shortCode using field originalUrl, with filter value https://github.com
+2026-03-22 19:13:26.194 DEBUG [http-nio-8081-exec-3] com.shortenurl.util.Util - Set expiry 300s for key tWLSnk in Redis
+2026-03-22 19:13:26.194 DEBUG [http-nio-8081-exec-3] com.shortenurl.util.Util - Saved key tWLSnk with timeout 300s to Redis
+2026-03-22 19:13:26.198 DEBUG [http-nio-8081-exec-3] com.shortenurl.util.Util - Short Code: tWLSnk
